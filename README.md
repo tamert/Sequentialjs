@@ -32,6 +32,7 @@ $('ul li').stepbystep({
 Random
 ```js
 $('ul li').stepbystep({
+	start : false, // close for false or open for true
 	random : true
 },function(){
 	alert("complate!");
@@ -40,6 +41,7 @@ $('ul li').stepbystep({
 One by One
 ```js
 $('ul li').stepbystep({
+	start : false, // close for false or open for true
 	onebyone : true
 },function(){
 	alert("complate!");
