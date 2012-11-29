@@ -3,6 +3,9 @@ stepbystep
 
 stepbystep is basic jQuery step effect plugin for all objects
 
+How to use
+==========
+
 ```html
 <ul>
 	<li>test 1</li>
@@ -17,17 +20,18 @@ stepbystep is basic jQuery step effect plugin for all objects
 
 Basic
 ```js
-$('ul').stepbystep({
+$('ul li').stepbystep({
+	start : false, // close for false or open for true
 	effect : "slide", // slide or fade
 	speed : 3000, // animate speed
-	wait : 100, // time of wait
+	wait : 100 // time of wait
 },function(){
 	alert("complate!");
 });
 ```
 Random
 ```js
-$('ul').stepbystep({
+$('ul li').stepbystep({
 	random : true
 },function(){
 	alert("complate!");
@@ -35,7 +39,7 @@ $('ul').stepbystep({
 ```
 One by One
 ```js
-$('ul').stepbystep({
+$('ul li').stepbystep({
 	onebyone : true
 },function(){
 	alert("complate!");
