@@ -26,6 +26,7 @@
     
     var options = $.extend({}, defaults, options); 
 
+
     if(typeof callback != 'function'){
         callback = function(){ }; 
     }
@@ -54,7 +55,9 @@
       }
 
       	if(options.number==0){
-	      	var $this = $.shuffle($this);
+      		if(options.toggle!=1) {
+	      		var $this = $.shuffle($this);
+	      	}
 	    }
    }
    
@@ -85,6 +88,7 @@
    		if(options.toggle==0){
 	   		options.toggle = 1; 
 	   		next = parseInt(next-1);
+	   		//	console.log(next+" - birinci");
 	   		if(options.start){
 	   			options.start = false;
 	   		} else {
@@ -92,7 +96,8 @@
 	   		}
 		} else if(options.toggle==1) {
 		   	options.toggle = 2;  
-
+		   	
+		   	//	console.log(next+" - ikinci");
 		   	if(options.start){
 	   			options.start = false;
 	   		} else {
@@ -100,10 +105,11 @@
 	   		}
 		}
    }
-     //console.log("select ->"+next+"  start ->"+options.start+" toggle->"+options.toggle);
+//     console.log("select ->"+next+"  start ->"+options.start+" toggle->"+options.toggle+" item->"+item);
 
    if(options.toggle==2){
 	   options.toggle = 0;
+	   //console.log(next+" - üçüncü");
    }
    //console.log(options.toggle);
     
