@@ -1,7 +1,7 @@
-stepbystep
+Sequentialjs
 ==========
 
-stepbystep is basic jQuery step effect plugin for all objects
+Sequentialjs is basic jQuery step effect plugin for all objects
 
 How to use
 ==========
